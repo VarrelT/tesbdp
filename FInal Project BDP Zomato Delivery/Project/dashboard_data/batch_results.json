@@ -1,0 +1,338 @@
+{
+  "total_orders": 42493,
+  "by_traffic": [
+    {
+      "Road_traffic_density": "Jam",
+      "avg_delivery_time_min": 30.85,
+      "total_orders": 13234
+    },
+    {
+      "Road_traffic_density": "High",
+      "avg_delivery_time_min": 27.12,
+      "total_orders": 4185
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "avg_delivery_time_min": 26.77,
+      "total_orders": 10401
+    },
+    {
+      "Road_traffic_density": null,
+      "avg_delivery_time_min": 24.8,
+      "total_orders": 91
+    },
+    {
+      "Road_traffic_density": "Low",
+      "avg_delivery_time_min": 21.34,
+      "total_orders": 14582
+    }
+  ],
+  "by_weather": [
+    {
+      "Weather_conditions": "Cloudy",
+      "avg_delivery_time_min": 28.87,
+      "total_orders": 7082
+    },
+    {
+      "Weather_conditions": "Fog",
+      "avg_delivery_time_min": 28.83,
+      "total_orders": 7225
+    },
+    {
+      "Weather_conditions": "Windy",
+      "avg_delivery_time_min": 26.02,
+      "total_orders": 7026
+    },
+    {
+      "Weather_conditions": "Sandstorms",
+      "avg_delivery_time_min": 25.83,
+      "total_orders": 7044
+    },
+    {
+      "Weather_conditions": "Stormy",
+      "avg_delivery_time_min": 25.8,
+      "total_orders": 7183
+    },
+    {
+      "Weather_conditions": null,
+      "avg_delivery_time_min": 24.8,
+      "total_orders": 91
+    },
+    {
+      "Weather_conditions": "Sunny",
+      "avg_delivery_time_min": 21.71,
+      "total_orders": 6842
+    }
+  ],
+  "by_city": [
+    {
+      "City": "Semi-Urban",
+      "avg_delivery_time_min": 48.06,
+      "total_orders": 102
+    },
+    {
+      "City": "Metropolitian",
+      "avg_delivery_time_min": 27.23,
+      "total_orders": 31808
+    },
+    {
+      "City": "Urban",
+      "avg_delivery_time_min": 23.02,
+      "total_orders": 9481
+    },
+    {
+      "City": null,
+      "avg_delivery_time_min": 22.04,
+      "total_orders": 1102
+    }
+  ],
+  "heatmap": [
+    {
+      "Road_traffic_density": null,
+      "Weather_conditions": null,
+      "avg_delivery_time_min": 24.8
+    },
+    {
+      "Road_traffic_density": "High",
+      "Weather_conditions": "Cloudy",
+      "avg_delivery_time_min": 29.09
+    },
+    {
+      "Road_traffic_density": "High",
+      "Weather_conditions": "Fog",
+      "avg_delivery_time_min": 28.44
+    },
+    {
+      "Road_traffic_density": "High",
+      "Weather_conditions": "Sandstorms",
+      "avg_delivery_time_min": 27.62
+    },
+    {
+      "Road_traffic_density": "High",
+      "Weather_conditions": "Stormy",
+      "avg_delivery_time_min": 27.82
+    },
+    {
+      "Road_traffic_density": "High",
+      "Weather_conditions": "Sunny",
+      "avg_delivery_time_min": 22.47
+    },
+    {
+      "Road_traffic_density": "High",
+      "Weather_conditions": "Windy",
+      "avg_delivery_time_min": 27.08
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "Weather_conditions": "Cloudy",
+      "avg_delivery_time_min": 36.39
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "Weather_conditions": "Fog",
+      "avg_delivery_time_min": 36.44
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "Weather_conditions": "Sandstorms",
+      "avg_delivery_time_min": 29.72
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "Weather_conditions": "Stormy",
+      "avg_delivery_time_min": 29.57
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "Weather_conditions": "Sunny",
+      "avg_delivery_time_min": 22.8
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "Weather_conditions": "Windy",
+      "avg_delivery_time_min": 29.83
+    },
+    {
+      "Road_traffic_density": "Low",
+      "Weather_conditions": "Cloudy",
+      "avg_delivery_time_min": 22.32
+    },
+    {
+      "Road_traffic_density": "Low",
+      "Weather_conditions": "Fog",
+      "avg_delivery_time_min": 22.37
+    },
+    {
+      "Road_traffic_density": "Low",
+      "Weather_conditions": "Sandstorms",
+      "avg_delivery_time_min": 20.41
+    },
+    {
+      "Road_traffic_density": "Low",
+      "Weather_conditions": "Stormy",
+      "avg_delivery_time_min": 20.69
+    },
+    {
+      "Road_traffic_density": "Low",
+      "Weather_conditions": "Sunny",
+      "avg_delivery_time_min": 21.54
+    },
+    {
+      "Road_traffic_density": "Low",
+      "Weather_conditions": "Windy",
+      "avg_delivery_time_min": 20.72
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "Weather_conditions": "Cloudy",
+      "avg_delivery_time_min": 28.58
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "Weather_conditions": "Fog",
+      "avg_delivery_time_min": 28.14
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "Weather_conditions": "Sandstorms",
+      "avg_delivery_time_min": 27.82
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "Weather_conditions": "Stormy",
+      "avg_delivery_time_min": 27.71
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "Weather_conditions": "Sunny",
+      "avg_delivery_time_min": 20.25
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "Weather_conditions": "Windy",
+      "avg_delivery_time_min": 27.88
+    }
+  ],
+  "by_person": [
+    {
+      "Delivery_person_ID": "COIMBRES010DEL02",
+      "total_deliveries": 63,
+      "avg_delivery_time_min": 25.89,
+      "avg_rating": 4.64
+    },
+    {
+      "Delivery_person_ID": "VADRES14DEL01",
+      "total_deliveries": 63,
+      "avg_delivery_time_min": 26.11,
+      "avg_rating": 4.59
+    },
+    {
+      "Delivery_person_ID": "RANCHIRES02DEL01",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 26.29,
+      "avg_rating": 4.56
+    },
+    {
+      "Delivery_person_ID": "SURRES01DEL02",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 25.1,
+      "avg_rating": 4.65
+    },
+    {
+      "Delivery_person_ID": "VADRES12DEL02",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 26.48,
+      "avg_rating": 4.64
+    },
+    {
+      "Delivery_person_ID": "RANCHIRES16DEL01",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 28.63,
+      "avg_rating": 4.6
+    },
+    {
+      "Delivery_person_ID": "HYDRES04DEL02",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 27.23,
+      "avg_rating": 4.63
+    },
+    {
+      "Delivery_person_ID": "RANCHIRES13DEL01",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 28.56,
+      "avg_rating": 4.6
+    },
+    {
+      "Delivery_person_ID": "VADRES11DEL02",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 29.81,
+      "avg_rating": 4.59
+    },
+    {
+      "Delivery_person_ID": "SURRES11DEL01",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 25.82,
+      "avg_rating": 4.65
+    },
+    {
+      "Delivery_person_ID": "PUNERES01DEL01",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 27.97,
+      "avg_rating": 4.66
+    },
+    {
+      "Delivery_person_ID": "JAPRES11DEL02",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 28.6,
+      "avg_rating": 4.66
+    },
+    {
+      "Delivery_person_ID": "COIMBRES02DEL01",
+      "total_deliveries": 62,
+      "avg_delivery_time_min": 26.87,
+      "avg_rating": 4.63
+    },
+    {
+      "Delivery_person_ID": "JAPRES02DEL03",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 27.59,
+      "avg_rating": 4.63
+    },
+    {
+      "Delivery_person_ID": "CHENRES12DEL02",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 25.7,
+      "avg_rating": 4.61
+    },
+    {
+      "Delivery_person_ID": "INDORES08DEL02",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 23.51,
+      "avg_rating": 4.72
+    },
+    {
+      "Delivery_person_ID": "MUMRES02DEL02",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 26.11,
+      "avg_rating": 4.61
+    },
+    {
+      "Delivery_person_ID": "MUMRES01DEL01",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 28.1,
+      "avg_rating": 4.62
+    },
+    {
+      "Delivery_person_ID": "RANCHIRES14DEL02",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 25.82,
+      "avg_rating": 4.56
+    },
+    {
+      "Delivery_person_ID": "INDORES15DEL01",
+      "total_deliveries": 61,
+      "avg_delivery_time_min": 26.77,
+      "avg_rating": 4.61
+    }
+  ]
+}

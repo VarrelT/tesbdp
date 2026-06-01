@@ -1,0 +1,41 @@
+{
+  "batch_id": 13,
+  "total_orders": 26,
+  "avg_delivery_time": 25.0,
+  "by_city": [
+    {
+      "City": "Metropolitian",
+      "order_count": 20
+    },
+    {
+      "City": "Urban",
+      "order_count": 5
+    },
+    {
+      "City": null,
+      "order_count": 1
+    }
+  ],
+  "by_traffic": [
+    {
+      "Road_traffic_density": "High",
+      "order_count": 7,
+      "avg_time": 27.71
+    },
+    {
+      "Road_traffic_density": "Jam",
+      "order_count": 7,
+      "avg_time": 29.43
+    },
+    {
+      "Road_traffic_density": "Low",
+      "order_count": 6,
+      "avg_time": 21.33
+    },
+    {
+      "Road_traffic_density": "Medium",
+      "order_count": 6,
+      "avg_time": 20.33
+    }
+  ]
+}

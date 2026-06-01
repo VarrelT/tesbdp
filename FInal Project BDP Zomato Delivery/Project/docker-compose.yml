@@ -1,0 +1,135 @@
+version: "3"
+
+services:
+
+  namenode:
+    image: apache/hadoop:3.3.5
+    platform: linux/amd64
+    container_name: namenode
+    hostname: namenode
+    user: root
+    environment:
+      - HADOOP_HOME=/opt/hadoop
+    volumes:
+      - ./hadoop_namenode:/opt/hadoop/data/nameNode
+      - ./hadoop_tmp:/opt/hadoop/data/tmp
+      - ./hadoop_config:/opt/hadoop/etc/hadoop
+      - ./start-hdfs.sh:/start-hdfs.sh
+      - ./data:/data
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    command: ["/bin/bash", "/start-hdfs.sh"]
+    networks:
+      - bdp_network
+
+  datanode1:
+    image: apache/hadoop:3.3.5
+    platform: linux/amd64
+    container_name: datanode1
+    hostname: datanode1
+    user: root
+    environment:
+      - HADOOP_HOME=/opt/hadoop
+    volumes:
+      - ./hadoop_datanode1:/opt/hadoop/data/dataNode
+      - ./hadoop_config:/opt/hadoop/etc/hadoop
+      - ./init-datanode.sh:/init-datanode.sh
+      - ./data:/data
+    ports:
+      - "9864:9864"
+    depends_on:
+      - namenode
+    command: ["/bin/bash", "/init-datanode.sh"]
+    networks:
+      - bdp_network
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    networks:
+      - bdp_network
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - bdp_network
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+    depends_on:
+      - kafka
+    networks:
+      - bdp_network
+
+  spark-master:
+    image: apache/spark:4.0.0
+    container_name: spark-master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - HOME=/tmp
+      - SPARK_SUBMIT_OPTS=-Duser.home=/tmp
+    ports:
+      - "7077:7077"
+      - "8082:8080"
+    volumes:
+      - ./jobs:/opt/jobs
+      - ./checkpoints:/opt/checkpoints
+      - ./dashboard_data:/opt/dashboard_data
+      - ./data:/opt/data
+    networks:
+      - bdp_network
+
+  spark-worker:
+    image: apache/spark:4.0.0
+    container_name: spark-worker
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    environment:
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_WORKER_CORES=2
+    depends_on:
+      - spark-master
+    volumes:
+      - ./jobs:/opt/jobs
+      - ./checkpoints:/opt/checkpoints
+      - ./dashboard_data:/opt/dashboard_data
+    networks:
+      - bdp_network
+
+  streamlit:
+    build: ./dashboard
+    container_name: streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dashboard_data:/app/dashboard_data
+    environment:
+      - DASHBOARD_DIR=/app/dashboard_data
+    depends_on:
+      - spark-master
+    networks:
+      - bdp_network
+
+networks:
+  bdp_network:
+    driver: bridge
